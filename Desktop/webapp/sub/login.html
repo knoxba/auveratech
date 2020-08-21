@@ -1,0 +1,74 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Auvera</title>
+
+    <link href="..\build\current-build-login.css" rel="stylesheet" type="text/css">
+
+
+
+</head>
+<body onload="focusBadgeScanner();">
+    <nav>
+        <ul>
+            <li><a href="main.html">Home</a></li>
+            <li><a href="news.html">News</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a class="active" href="login.html">Login</a></li>
+            <li id="linear-effect" class="companyNameSmall">Auvera Technologies LLC.</li>
+        </ul>
+    </nav>
+
+    <div class="parentSidenav">
+        <div class="sidenav">
+            <a href="#">About</a>
+            <a href="#">Services</a>
+            <a href="#">Clients</a>
+            <a href="#">Contact</a>
+        </div>
+    </div>
+
+    <div id="invalid_entry" class="InvalidAlert">
+        <span class="CloseButton" onclick="this.parentElement.style.display='none';">&times;</span>
+        <strong>Invalid Password.</strong>
+    </div> <!-- https://www.w3schools.com/howto/howto_js_alert.asp -->
+    <div id="valid_entry" class="ValidAlert">
+        <span class="CloseButton" onclick="this.parentElement.style.display='none';">&times;</span>
+        <strong>Success.</strong>
+        Test
+    </div>
+
+    <div class="parentScanner">
+        <div>
+            <input id="authorization"
+                   class="username"
+                   minlength="7"
+                   placeholder="Enter username."
+                   required>
+        </div>
+        <div>
+            <input id="scanner"
+                   class="scanner"
+                   type="password"
+                   name="password"
+                   minlength="7"
+                   placeholder="Enter password."
+                   onkeydown="badgeScan();"
+                   required>
+        </div>
+    </div>
+
+    <div class="Logo"></div>
+
+    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.1.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://requirejs.org/docs/release/2.3.6/minified/require.js"></script>
+    <script src="..\js\jquery-about.js"></script> <!-- Imports jQuery reference-->
+    <script src="..\js\standard-about.js"></script>
+    <script src="..\js\scanner.js"></script>
+</body>
+
+
+</html>
