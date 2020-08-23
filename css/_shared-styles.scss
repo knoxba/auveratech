@@ -1,0 +1,192 @@
+@import "_animation-styles.scss";
+
+/* Navigation Bar */
+nav {
+	ul {
+		list-style-type: none;
+		margin: 0;
+		padding: 0;
+		overflow: hidden;
+		background-color: #333;
+	}
+
+	li {
+		float: left;
+	}
+
+	a {
+		display: block;
+		color: white;
+		text-align: center;
+		padding: 14px 16px;
+		text-decoration: none;
+	}
+
+	a:hover {
+		background-color: #111;
+	}
+
+	.companyNameSmall {
+		display: block;
+		color: white;
+		text-align: center;
+		padding: 14px 16px;
+		text-decoration: none;
+		float: right;
+	}
+
+	#linear-effect {
+		text-align: center;
+		background: linear-gradient(90deg, #333 30%, #ffffff 40%, #ffffff 60%, #333 80%);
+		background-size: 200% auto;
+		color: #333;
+		background-clip: text;
+		text-fill-color: transparent;
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		animation: shine 5s linear infinite;
+
+		@keyframes shine {
+			to {
+				background-position: 200% center;
+			}
+		}
+	}
+	/*.companyNameSmall {
+		span {
+			opacity: 0;
+			color: white;
+			transition: all 3s ease;
+		}
+
+		span.fade {
+			opacity: 1;
+			color: orange;
+		}
+	}*/
+}
+
+/* Sidenavigation Bar */
+.parentSidenav {
+	.sidenav {
+		height: 400%;
+		width: 160px;
+		position: fixed;
+		z-index: 1;
+		top: 0;
+		left: 0;
+		background-color: #111;
+		overflow-x: hidden;
+		padding-top: 0px;
+		opacity: 0.5;
+	}
+
+	%sidenavTextStyle {
+		padding: 6px 8px 6px 16px;
+		text-decoration: none;
+		color: #818181;
+		display: block;
+	}
+
+	.sidenav {
+		a {
+			@extend %sidenavTextStyle;
+		}
+
+		p {
+			@extend %sidenavTextStyle;
+			color: white;
+		}
+
+		a:hover {
+			color: #f1f1f1;
+		}
+	}
+}
+
+
+/* Background */
+body {
+	font-family: helvetica, sans-serif;
+	margin: 0 auto;
+	max-width: 800px;
+	background: linear-gradient(267deg, #afc8c5, #1c152b);
+	background-size: 400% 400%;
+	-webkit-animation: backgroundAnimation 16s ease infinite;
+	-moz-animation: backgroundAnimation 16s ease infinite;
+	-o-animation: backgroundAnimation 16s ease infinite;
+	animation: backgroundAnimation 16s ease infinite;
+}
+
+.header {
+	text-align: center;
+	color: #afc8c5;
+	font-family: 'Arial', cursive;
+	margin: 60px 0 0 0;
+	display: inline-block;
+}
+
+
+.parentLogo {
+	%sharedLogoTraits {
+		background-image: url("..\\images\\Logo\\standard\\grayscale-transparent.png");
+		height: 400px;
+		background-size: cover;
+		margin: 40px 0 0 0;
+		border-radius: 12px;
+		position: relative;
+	}
+
+	.mainLogo {
+		@extend %sharedLogoTraits;
+		z-index: 10;
+		opacity: 0.1;
+		top: -150px;
+		left: -300px;
+	}
+
+	.newsLogo {
+		@extend %sharedLogoTraits;
+		z-index: 10;
+		opacity: 0.2;
+		top: 0px;
+		left: 300px;
+	}
+
+	.servicesLogo {
+		@extend %sharedLogoTraits;
+		z-index: -1;
+		opacity: 0.2;
+		top: -1500px;
+		left: -340px;
+	}
+
+	.contactLogo {
+		@extend %sharedLogoTraits;
+		z-index: 5;
+		opacity: 0.2;
+		top: -1500px;
+		left: -340px;
+	}
+}
+
+.parentFooter {
+	.footer {
+		position: fixed;
+		bottom: 0px;
+		left: 0px;
+		height: 160px;
+		width: 100%;
+		background-color: #111;
+		overflow-x: hidden;
+		padding-top: 0px;
+		opacity: 0.5;
+		color: white;
+	}
+
+	h2 {
+		text-align: center; 
+	}
+}
+
+
