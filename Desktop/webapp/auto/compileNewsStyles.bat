@@ -1,1 +1,0 @@
-sass C:\Users\knoxb\Desktop\webapp\css\news-styles.scss C:\Users\knoxb\Desktop\webapp\build\current-build-news.css
